@@ -1,0 +1,42 @@
+:root {
+    --logo-brown: hsl(17, 53%, 18%);
+    --log-tan: hsl(50, 17%, 93%);
+
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+    height: 100px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: var(--white);
+}
+
+.header-img {
+}
+
+.header-nav {
+}
+
+.header-nav-a {
+    color: var(--logo-brown);
+    text-decoration: none;
+}
+
+.main {
+    height: calc(100vh - 200px);
+    background-color: var(--logo-brown);
+}
+
+.footer {
+    height: 100px;
+    background-color: var(--white);
+}
