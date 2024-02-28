@@ -50,16 +50,57 @@ h6 {
     isolation: isolate;
 }
 
+/* FONTS */
+.body-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.heading-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.special-text {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a,
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* VARIABLES */
 :root {
     --primary: hsl(2, 32%, 17%); /* 381e1d */
     --background: hsl(345, 9%, 91%); /* #eae6e7 */
-    --text: hsl(88, 18%, 20%); /* #343d2a*/
+
+    --lighter-text: hsl(72, 18%, 36%); /* #666d4b*/
+    --darker-text: hsl(88, 18%, 20%); /* #343d2a*/
+    --text: hsl(86, 17%, 25%); /* #404934 */
 }
 
 /* TAGS */
 body {
     margin: 0px;
+    color: var(--text);
 }
 
 header,
@@ -71,6 +112,7 @@ footer {
 
 main {
     height: calc(100vh - 200px);
+    width: 100%;
     background-color: var(--primary);
 }
 
@@ -96,8 +138,45 @@ a {
     }
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+input,
+textarea {
+    padding: 6px;
+    height: 48px;
+    width: 300px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--primary);
+}
+
+textarea {
+    height: 96px;
+    resize: vertical;
+}
+
+button {
+    height: 48px;
+    width: 300px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--text);
+    background-color: var(--text);
+    color: var(--background);
+    cursor: pointer;
+}
+
+button:focus,
+button:hover {
+    background-color: var(--lighter-text);
+}
+
 /* CLASSES */
-.hr {
+.horizontal-rule {
     border-width: 1px;
     border-style: solid;
     border-color: var(--background);
@@ -106,4 +185,81 @@ a {
     @media screen and (max-width: 580px) {
         border-color: var(--primary);
     }
+}
+
+.vertical-rule {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--primary);
+    height: 100%;
+}
+
+/* HOME */
+.home-main {
+    background-color: var(--primary);
+    background-image: url("cover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-content {
+    margin: auto;
+    height: 100%;
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+}
+
+.home-p1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    color: var(--background);
+}
+
+.home-p2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 8;
+    color: var(--background);
+}
+
+.home-p3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    color: var(--background);
+}
+
+/* PRODUCTS */
+
+/* CONTACT */
+.contact-main {
+    background-color: var(--background);
+}
+
+.contact-content {
+    margin: auto;
+    height: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.contact-address {
+}
+
+.contact-form {
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
 }

@@ -7,6 +7,13 @@
 
         <link rel="stylesheet" type="text/css" href="index.css" />
         <script src="index.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
 
     <body>
@@ -26,7 +33,65 @@
             </nav>
         </header>
 
-        <main></main>
+        <main class="contact-main">
+            <section class="contact-content">
+                <address class="contact-address">
+                    Email:
+                    <a href="mailto:admin@re-write.co.za"
+                        >admin@re-write.co.za</a
+                    ><br />
+                    Phone:
+                    <a href="tel:0123456789">0123456789</a><br />
+                </address>
+
+                <hr class="vertical-rule" />
+
+                <form
+                    class="contact-form"
+                    action="https://api.web3forms.com/submit"
+                    method="POST"
+                >
+                    <!-- web3forms -->
+                    <input
+                        type="hidden"
+                        name="access_key"
+                        value="0dd69732-eb09-4b8c-a8f0-cb43510ad9bf"
+                    />
+                    <input
+                        type="hidden"
+                        name="subject"
+                        value="New Contact Form Submission"
+                    />
+                    <input type="hidden" name="from_name" value="Re-Write" />
+                    <input
+                        type="hidden"
+                        name="redirect"
+                        value="http://localhost:5500/contact.html"
+                    />
+
+                    <div class="contact-field">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="message">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
 
         <footer>
             <nav>
@@ -34,7 +99,7 @@
                 <a href="products.html">Products</a>
                 <a href="contact.html">Contact</a>
 
-                <hr class="hr" />
+                <hr class="horizontal-rule" />
 
                 <a href="https://www.facebook.com" target="_blank">
                     <img
