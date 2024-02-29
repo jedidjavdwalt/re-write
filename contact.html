@@ -35,6 +35,8 @@
 
         <main class="contact-main">
             <section class="contact-content">
+                <h1>Contact</h1>
+
                 <address class="contact-address">
                     Email:
                     <a href="mailto:admin@re-write.co.za"
@@ -44,7 +46,10 @@
                     <a href="tel:0123456789">0123456789</a><br />
                 </address>
 
-                <hr class="vertical-rule" />
+                <hr
+                    class="horizontal-rule"
+                    style="border-color: var(--primary)"
+                />
 
                 <form
                     class="contact-form"
@@ -69,14 +74,21 @@
                         value="http://localhost:5500/contact.html"
                     />
 
-                    <div class="contact-field">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required />
-                    </div>
+                    <div class="contact-row">
+                        <div class="contact-field">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
 
-                    <div class="contact-field">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required />
+                        <div class="contact-field">
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            />
+                        </div>
                     </div>
 
                     <div class="contact-field">
@@ -85,10 +97,13 @@
                             id="message"
                             name="message"
                             required
+                            style="width: 100%"
                         ></textarea>
                     </div>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" style="margin-left: auto">
+                        Submit
+                    </button>
                 </form>
             </section>
         </main>

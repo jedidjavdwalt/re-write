@@ -69,38 +69,28 @@ h6 {
     font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-a,
-p {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 /* VARIABLES */
 :root {
     --primary: hsl(2, 32%, 17%); /* 381e1d */
+    --primary-transparent: hsla(2, 32%, 17%, 0.3);
+
     --background: hsl(345, 9%, 91%); /* #eae6e7 */
 
     --lighter-text: hsl(72, 18%, 36%); /* #666d4b*/
     --darker-text: hsl(88, 18%, 20%); /* #343d2a*/
     --text: hsl(86, 17%, 25%); /* #404934 */
+
+    --body-text: "Poppins", sans-serif;
+    --heading-text: "Poppins", sans-serif;
+    --special-text: "Courier Prime", monospace;
 }
 
-/* TAGS */
+/* SETUP */
 body {
     margin: 0px;
     color: var(--text);
+    background-color: var(--background);
+    font-family: var(--body-text);
 }
 
 header,
@@ -113,7 +103,6 @@ footer {
 main {
     height: calc(100vh - 200px);
     width: 100%;
-    background-color: var(--primary);
 }
 
 nav {
@@ -127,6 +116,24 @@ nav {
     @media screen and (max-width: 1024px) {
         margin: 0px 48px;
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-text);
+    font-weight: 700;
+    font-style: normal;
+}
+
+a,
+p {
+    font-family: var(--body-text);
+    font-weight: 400;
+    font-style: normal;
 }
 
 a {
@@ -197,7 +204,12 @@ button:hover {
 /* HOME */
 .home-main {
     background-color: var(--primary);
-    background-image: url("cover.jpg");
+    background-image: linear-gradient(
+            0deg,
+            var(--primary-transparent),
+            var(--primary-transparent)
+        ),
+        url("cover.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,44 +224,79 @@ button:hover {
     align-items: center;
 }
 
-.home-p1 {
+.home-special-text {
     grid-row-start: 1;
     grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 8;
+    color: var(--background);
+}
+
+.home-p1 {
+    grid-row-start: 2;
+    grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 5;
     color: var(--background);
 }
 
 .home-p2 {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     grid-column-start: 4;
     grid-column-end: 8;
     color: var(--background);
 }
 
 .home-p3 {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 5;
     color: var(--background);
 }
 
 /* PRODUCTS */
+.products-main {
+    padding: 24px;
+}
+
+.products-grid {
+    height: calc(100% - 48px);
+    width: 100%;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.products-grid-item {
+    background-color: var(--primary);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    color: var(--background);
+    will-change: transform;
+    transition-duration: 300ms;
+}
+
+.products-grid-item:hover {
+    transform: scale(0.9);
+}
 
 /* CONTACT */
 .contact-main {
-    background-color: var(--background);
 }
 
 .contact-content {
     margin: auto;
     height: 100%;
-    max-width: 1024px;
+    width: fit-content;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 24px;
 }
 
@@ -257,6 +304,12 @@ button:hover {
 }
 
 .contact-form {
+}
+
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    gap: 24px
 }
 
 .contact-field {
