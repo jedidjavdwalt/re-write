@@ -71,14 +71,14 @@ h6 {
 
 /* VARIABLES */
 :root {
-    --primary: hsl(2, 32%, 17%); /* 381e1d */
+    --primary: hsl(2, 32%, 17%);
     --primary-transparent: hsla(2, 32%, 17%, 0.3);
 
-    --background: hsl(345, 9%, 91%); /* #eae6e7 */
+    --secondary: hsl(345, 9%, 91%);
 
-    --lighter-text: hsl(72, 18%, 36%); /* #666d4b*/
-    --darker-text: hsl(88, 18%, 20%); /* #343d2a*/
-    --text: hsl(86, 17%, 25%); /* #404934 */
+    /* --lighter-text: hsl(72, 18%, 36%);
+    --darker-text: hsl(88, 18%, 20%);
+    --text: hsl(86, 17%, 25%); */
 
     --body-text: "Poppins", sans-serif;
     --heading-text: "Poppins", sans-serif;
@@ -88,8 +88,8 @@ h6 {
 /* SETUP */
 body {
     margin: 0px;
-    color: var(--text);
-    background-color: var(--background);
+    color: var(--primary);
+    background-color: var(--secondary);
     font-family: var(--body-text);
 }
 
@@ -97,7 +97,7 @@ header,
 footer {
     height: 100px;
     width: 100%;
-    background-color: var(--background);
+    background-color: var(--secondary);
 }
 
 main {
@@ -116,6 +116,12 @@ nav {
     @media screen and (max-width: 1024px) {
         margin: 0px 48px;
     }
+}
+
+section {
+    margin: auto;
+    height: 100%;
+    max-width: 1024px;
 }
 
 h1,
@@ -140,9 +146,13 @@ a {
     color: var(--primary);
     text-decoration: none;
 
-    &:hover {
-        text-decoration: underline;
-    }
+    /* animation */
+    will-change: text-decoration;
+    transition-duration: 300ms;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 form {
@@ -156,7 +166,7 @@ textarea {
     padding: 6px;
     height: 48px;
     width: 300px;
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-color: var(--primary);
 }
@@ -169,24 +179,29 @@ textarea {
 button {
     height: 48px;
     width: 300px;
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
-    border-color: var(--text);
-    background-color: var(--text);
-    color: var(--background);
+    border-color: var(--primary);
+    background-color: transparent;
+    color: var(--primary);
     cursor: pointer;
+
+    /* animation */
+    will-change: background-color, color;
+    transition-duration: 300ms;
 }
 
 button:focus,
 button:hover {
-    background-color: var(--lighter-text);
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 /* CLASSES */
 .horizontal-rule {
     border-width: 1px;
     border-style: solid;
-    border-color: var(--background);
+    border-color: var(--secondary);
     width: 100%;
 
     @media screen and (max-width: 580px) {
@@ -218,6 +233,10 @@ button:hover {
     font-size: 1.1rem;
 }
 
+a.active {
+    font-weight: 700;
+}
+
 /* HOME */
 .home-main {
     background-color: var(--primary);
@@ -230,12 +249,21 @@ button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* animation */
+    animation: fade-in 3000ms;
 }
 
-.home-content {
-    margin: auto;
-    height: 100%;
-    max-width: 1024px;
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.home-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
@@ -246,7 +274,7 @@ button:hover {
     grid-row-end: 2;
     grid-column-start: 4;
     grid-column-end: 8;
-    color: var(--background);
+    color: var(--secondary);
 }
 
 .home-p1 {
@@ -254,7 +282,7 @@ button:hover {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 5;
-    color: var(--background);
+    color: var(--secondary);
 }
 
 .home-p2 {
@@ -262,7 +290,7 @@ button:hover {
     grid-row-end: 4;
     grid-column-start: 4;
     grid-column-end: 8;
-    color: var(--background);
+    color: var(--secondary);
 }
 
 .home-p3 {
@@ -270,12 +298,14 @@ button:hover {
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 5;
-    color: var(--background);
+    color: var(--secondary);
 }
 
 /* PRODUCTS */
 .products-main {
-    padding: 24px;
+}
+
+.products-section {
 }
 
 .products-grid {
@@ -295,7 +325,7 @@ button:hover {
     display: flex;
     align-items: end;
     justify-content: end;
-    color: var(--background);
+    color: var(--secondary);
     will-change: transform;
     transition-duration: 300ms;
 }
@@ -308,10 +338,8 @@ button:hover {
 .contact-main {
 }
 
-.contact-content {
-    margin: auto;
-    height: 100%;
-    width: fit-content;
+.contact-section {
+    /* width: fit-content; */
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -326,7 +354,7 @@ button:hover {
 .contact-row {
     display: flex;
     flex-direction: row;
-    gap: 24px
+    gap: 24px;
 }
 
 .contact-field {
