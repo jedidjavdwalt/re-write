@@ -122,6 +122,14 @@ section {
     margin: auto;
     height: 100%;
     max-width: 1024px;
+    padding: 24px 0px;
+}
+
+address {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    text-wrap: nowrap;
 }
 
 h1,
@@ -302,12 +310,6 @@ a.active {
 }
 
 /* PRODUCTS */
-.products-main {
-}
-
-.products-section {
-}
-
 .products-grid {
     height: calc(100% - 48px);
     width: 100%;
@@ -335,22 +337,6 @@ a.active {
 }
 
 /* CONTACT */
-.contact-main {
-}
-
-.contact-section {
-    /* width: fit-content; */
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.contact-address {
-}
-
-.contact-form {
-}
-
 .contact-row {
     display: flex;
     flex-direction: row;
