@@ -1,0 +1,10 @@
+:root {
+    --primary: hsl(2, 32%, 17%);
+    --primary-transparent: hsla(2, 32%, 17%, 0.3);
+
+    --secondary: hsl(345, 9%, 91%);
+
+    --body-text: "Poppins", sans-serif;
+    --heading-text: "Poppins", sans-serif;
+    --special-text: "Courier Prime", monospace;
+}

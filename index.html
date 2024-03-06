@@ -2,17 +2,46 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Sustainable and unique handcrafted pens, locally made from reclaimed wood."
+        />
 
-        <title>re-write</title>
+        <title>Re-Write</title>
 
+        <!-- styles -->
         <link rel="stylesheet" type="text/css" href="index.css" />
-        <script src="index.js"></script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <!-- fonts -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
+            rel="preload"
+            as="style"
             href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:wght@400;700&display=swap"
+        />
+        <link
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:wght@400;700&display=swap"
+            media="print"
+            onload="this.media='all'"
+        />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:wght@400;700&display=swap"
+            />
+        </noscript> -->
+
+        <!-- images -->
+        <link rel="preload" as="image" imagesrcset="cover.webp" />
+        <link
+            rel="preload"
+            fetchpriority="high"
+            as="image"
+            href="logo.webp"
+            type="image/jpg"
         />
     </head>
 
@@ -21,7 +50,7 @@
             <nav>
                 <a href="index.html">
                     <img
-                        src="logo.jpg"
+                        src="logo.webp"
                         height="76px"
                         width="76px"
                         alt="Re-Write Logo"
@@ -61,7 +90,7 @@
         </main>
 
         <footer>
-            <nav>
+            <nav class="footer-nav">
                 <address>
                     <span>
                         Email:
@@ -76,25 +105,28 @@
                     </span>
                 </address>
 
-                <hr class="horizontal-rule" />
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img
+                            src="facebook.icon.svg"
+                            height="24px"
+                            width="24px"
+                            alt="Facebook Icon"
+                        />
+                    </a>
 
-                <a href="https://www.facebook.com" target="_blank">
-                    <img
-                        src="facebook.icon.svg"
-                        height="24px"
-                        width="24px"
-                        alt="Facebook Icon"
-                    />
-                </a>
-
-                <a href="https://www.instagram.com/re_writesa/" target="_blank">
-                    <img
-                        src="instagram.icon.svg"
-                        height="24px"
-                        width="24px"
-                        alt="instagram Icon"
-                    />
-                </a>
+                    <a
+                        href="https://www.instagram.com/re_writesa/"
+                        target="_blank"
+                    >
+                        <img
+                            src="instagram.icon.svg"
+                            height="24px"
+                            width="24px"
+                            alt="instagram Icon"
+                        />
+                    </a>
+                </div>
             </nav>
         </footer>
     </body>

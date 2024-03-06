@@ -1,0 +1,16 @@
+@import "css/reset.css";
+@import "css/fonts.css";
+@import "css/variables.css";
+@import "css/tags.css";
+@import "css/classes.css";
+
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+}
