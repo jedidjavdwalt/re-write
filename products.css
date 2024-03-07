@@ -3,7 +3,6 @@
 @import "css/variables.css";
 @import "css/tags.css";
 @import "css/classes.css";
-@import "css/animations.css";
 
 .products-grid {
     height: calc(100% - 48px);
