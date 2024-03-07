@@ -3,6 +3,7 @@
 @import "css/variables.css";
 @import "css/tags.css";
 @import "css/classes.css";
+@import "css/animations.css";
 
 .products-grid {
     height: calc(100% - 48px);
@@ -22,6 +23,9 @@
     align-items: end;
     justify-content: end;
     color: var(--secondary);
+
+    /* animation */
+    animation: fade-in 3000ms;
     will-change: transform;
     transition-duration: 300ms;
 }

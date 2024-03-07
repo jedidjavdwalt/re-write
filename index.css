@@ -3,6 +3,7 @@
 @import "css/variables.css";
 @import "css/tags.css";
 @import "css/classes.css";
+@import "css/animations.css";
 
 .home-main {
     background-color: var(--primary);
@@ -19,15 +20,6 @@
 
     /* animation */
     animation: fade-in 3000ms;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .home-section {
