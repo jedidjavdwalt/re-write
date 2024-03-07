@@ -1,6 +1,6 @@
 :root {
     --primary: hsl(2, 32%, 17%);
-    --primary-transparent: hsla(2, 32%, 17%, 0.3);
+    --primary-transparent: hsla(2, 32%, 17%, 0.5);
 
     --secondary: hsl(345, 9%, 91%);
 

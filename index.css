@@ -22,6 +22,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
+    gap: 12px;
 }
 
 .home-special-text {
@@ -54,4 +55,12 @@
     grid-column-start: 1;
     grid-column-end: 5;
     color: var(--secondary);
+}
+
+@media (max-width: 580px) {
+    .home-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

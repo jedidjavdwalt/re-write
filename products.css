@@ -32,3 +32,13 @@
 .products-grid-item:hover {
     transform: scale(0.9);
 }
+
+@media (max-width: 580px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-grid-item {
+        height: 145px;
+    }
+}

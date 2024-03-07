@@ -9,27 +9,35 @@ body {
 
 header,
 footer {
-    height: 100px;
+    min-height: 100px;
     width: 100%;
     background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+}
+
+header {
+    border-bottom: 2px solid var(--primary);
+    justify-content: start;
+}
+
+footer {
+    border-top: 2px solid var(--primary);
+    justify-content: end;
 }
 
 main {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 204px);
     width: 100%;
 }
 
 nav {
-    margin: auto;
+    margin-left: 24px;
     height: 100%;
     max-width: 1024px;
     display: flex;
     align-items: center;
     gap: 24px;
-
-    @media screen and (max-width: 1024px) {
-        margin: 0px 48px;
-    }
 }
 
 section {
@@ -40,10 +48,15 @@ section {
 }
 
 address {
+    margin-right: 24px;
     display: flex;
     flex-direction: row;
     gap: 24px;
-    text-wrap: nowrap;
+}
+
+address > a {
+    display: inline-flex;
+    gap: 6px;
 }
 
 h1,
@@ -108,4 +121,37 @@ button:focus,
 button:hover {
     background-color: var(--primary);
     color: var(--secondary);
+}
+
+@media (max-width: 580px) {
+    footer {
+        justify-content: start;
+    }
+
+    main {
+        height: calc(100vh - 284px);
+        overflow: scroll;
+    }
+
+    nav {
+        margin: 24px;
+        gap: 12px;
+    }
+
+    address {
+        margin: 24px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    section {
+        padding: 24px;
+    }
 }
