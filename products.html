@@ -14,9 +14,17 @@
         <link rel="stylesheet" type="text/css" href="products.css" />
 
         <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:wght@400;700&display=swap"
+        />
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:wght@400;700&display=swap"
+            media="print"
+            onload="this.media='all'"
         />
 
         <!-- images -->
@@ -24,7 +32,7 @@
             rel="preload"
             fetchpriority="high"
             as="image"
-            imagesrcset="logo.webp"
+            imagesrcset="assets/logo.webp"
         />
         <link rel="preload" as="image" imagesrcset="akasia.webp" />
     </head>
@@ -34,7 +42,7 @@
             <nav>
                 <a href="index.html">
                     <img
-                        src="logo.webp"
+                        src="assets/logo.webp"
                         height="76px"
                         width="76px"
                         alt="Re-Write Logo"
@@ -59,7 +67,7 @@
                                     var(--primary-transparent),
                                     var(--primary-transparent)
                                 ),
-                                url('akasia.jpg');
+                                url('assets/akasia.webp');
                         "
                     >
                         <h2>Akasia</h2>
@@ -73,7 +81,7 @@
                                     var(--primary-transparent),
                                     var(--primary-transparent)
                                 ),
-                                url('akasia.jpg');
+                                url('assets/akasia.webp');
                         "
                     >
                         <h2>Black Stinkwood</h2>
@@ -87,7 +95,7 @@
                                     var(--primary-transparent),
                                     var(--primary-transparent)
                                 ),
-                                url('akasia.jpg');
+                                url('assets/akasia.webp');
                         "
                     >
                         <h2>Ebony</h2>
@@ -101,7 +109,7 @@
                                     var(--primary-transparent),
                                     var(--primary-transparent)
                                 ),
-                                url('akasia.jpg');
+                                url('assets/akasia.webp');
                         "
                     >
                         <h2>Ivory</h2>
@@ -115,7 +123,7 @@
                                     var(--primary-transparent),
                                     var(--primary-transparent)
                                 ),
-                                url('akasia.jpg');
+                                url('assets/akasia.webp');
                         "
                     >
                         <h2>Jacaranda</h2>
@@ -129,7 +137,7 @@
                                     var(--primary-transparent),
                                     var(--primary-transparent)
                                 ),
-                                url('akasia.jpg');
+                                url('assets/akasia.webp');
                         "
                     >
                         <h2>Musasa</h2>
@@ -143,7 +151,7 @@
                                     var(--primary-transparent),
                                     var(--primary-transparent)
                                 ),
-                                url('akasia.jpg');
+                                url('assets/akasia.webp');
                         "
                     >
                         <h2>Red Mahogany</h2>
@@ -157,7 +165,7 @@
                                     var(--primary-transparent),
                                     var(--primary-transparent)
                                 ),
-                                url('akasia.jpg');
+                                url('assets/akasia.webp');
                         "
                     >
                         <h2>Rhodesian Teak</h2>
@@ -185,7 +193,7 @@
                 <div class="social-links">
                     <a href="https://www.facebook.com" target="_blank">
                         <img
-                            src="facebook.icon.svg"
+                            src="assets/facebook.icon.svg"
                             height="24px"
                             width="24px"
                             alt="Facebook Icon"
@@ -197,7 +205,7 @@
                         target="_blank"
                     >
                         <img
-                            src="instagram.icon.svg"
+                            src="assets/instagram.icon.svg"
                             height="24px"
                             width="24px"
                             alt="instagram Icon"

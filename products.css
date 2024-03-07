@@ -25,7 +25,6 @@
     color: var(--secondary);
 
     /* animation */
-    animation: fade-in 3000ms;
     will-change: transform;
     transition-duration: 300ms;
 }

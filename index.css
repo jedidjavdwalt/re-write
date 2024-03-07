@@ -12,14 +12,10 @@
             var(--primary-transparent),
             var(--primary-transparent)
         ),
-        image-set("cover.webp");
-    /* url("cover.webp"); */
+        image-set("assets/cover.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    /* animation */
-    animation: fade-in 3000ms;
 }
 
 .home-section {
